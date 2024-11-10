@@ -1,0 +1,60 @@
+/* TitleSection.css */
+.title-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    padding-left: 5vw; /* Slight left padding */
+    color: white;
+    background: #0f0f0f;
+  }
+  
+  .title {
+    font-size: 3vw; /* Reduced size for title */
+    font-weight: bold;
+    margin: 0;
+    animation: fadeIn 1.5s ease-in-out;
+  }
+  
+  .subtitle {
+    font-size: 1.5vw; /* Reduced size for subtitle */
+    font-weight: 300;
+    color: #cccccc;
+    margin-top: 1.5rem; /* Added top margin to create space between "I'm a" and title */
+    display: flex;
+    align-items: center;
+  }
+  
+  .subtitle span {
+    margin-right: 0.5rem; /* Space between "I'm a" and dynamic title */
+  }
+  
+  .header-sub-title {
+    color: #fff;
+    font-family: "Courier", monospace;
+    font-size: 2vw;
+    padding: 0.1em;
+  }
+  
+  .blink {
+    animation: blink 0.5s infinite;
+  }
+  
+  @keyframes blink {
+    to {
+      opacity: 0;
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

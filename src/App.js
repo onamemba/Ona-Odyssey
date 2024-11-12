@@ -1,17 +1,29 @@
 import React from 'react';
 import './App.css'; // Assuming basic styling is here
+import Header from './components/Header';
 import TitleSection from './components/TitleSection';
-// import AboutSection from './components/AboutSection';
-// import ProjectsSection from './components/ProjectsSection';
-// import ContactSection from './components/ContactSection';
-
+import AboutSection from './components/AboutSection';
+import WorkSection from './components/WorkSection';
+import EducationSection from './components/EducationSection';
+import CertificationSection from './components/CertificationSection';
+import ProjectSection from './components/ProjectSection';
+import ContactSection from './components/ContactSection';
 function App() {
   return (
-    <div className="App">
-      <TitleSection />
-      {/* <AboutSection />
-      <ProjectsSection />
+    <div>
+      <Header />
+      <div id="title-section">
+        <TitleSection />
+      </div>
+      <div id="about-section">
+        <AboutSection />
+      </div>
+      {/* <WorkSection />
+      <EducationSection />
+      <CertificationSection />
+      <ProjectSection />
       <ContactSection /> */}
+      {/* Add more sections here */}
     </div>
   );
 }

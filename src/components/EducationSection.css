@@ -1,0 +1,56 @@
+.education-container {
+    background-color: #111; /* Dark background */
+    color: #fff; /* White text */
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .education-heading {
+    text-align: center;
+  }
+  
+  .education-timeline {
+    position: relative;
+    width: 100%;
+  }
+  
+  .timeline-item {
+    position: relative;
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  
+  .timeline-dot {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #fff;
+    z-index: 1;
+  }
+  
+  .timeline-content {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  .timeline-content p {
+    margin: 10px 0;
+  }
+  
+  .timeline-content ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .timeline-content li {
+    margin-bottom: 5px;
+  }

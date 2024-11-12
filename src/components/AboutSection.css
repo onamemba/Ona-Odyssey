@@ -1,0 +1,65 @@
+/* about.css */
+
+#about-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    background-color: #0f0f0f;
+    padding: 50px 0;
+  }
+  
+  #about-section h2 {
+    font-size: 1rem;
+    color: #b3b3b3;
+    text-transform: uppercase;
+  }
+  
+  #about-section h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  
+  .profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #b3b3b3;
+    margin: 20px 0;
+    box-shadow: 0px 0px 20px 10px #b3b3b3;
+  }
+  
+  .description {
+    max-width: 600px;
+    text-align: left;
+    line-height: 1.8;
+    font-size: 1.1rem;
+  }
+  
+  .description p {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+  }
+  
+  .button-container {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  .button {
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    background: linear-gradient(45deg, #1a1919, #c9c0c0);
+    font-weight: bold;
+    transition: transform 0.2s;
+  }
+  
+  .button:hover {
+    transform: scale(1.05);
+  }
+  

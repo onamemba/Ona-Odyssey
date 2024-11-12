@@ -1,0 +1,41 @@
+.contact-form {
+    text-align: center;
+    background-color: #222;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .contact-form h2 {
+    margin-bottom: 20px;
+  }
+  
+  .contact-form input {
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid #fff;
+    background-color: transparent;
+    color: #fff;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .contact-form button {
+    background-color: #fff;
+    color: #222;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .footer {
+    margin-top: 20px;
+    font-size: 12px;
+  }
+  
+  .footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+  }

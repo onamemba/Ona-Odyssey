@@ -1,6 +1,32 @@
 import React, { useEffect } from 'react';
+import { Canvas } from '@react-three/fiber';
+import { OrbitControls, useGLTF } from '@react-three/drei';
+import * as THREE from 'three'; // Import THREE
 import './TitleSection.css';
 
+// AnimatedModel Component
+const AnimatedModel = ({ modelPath }) => {
+  const { scene, animations } = useGLTF(modelPath);
+  const mixer = new THREE.AnimationMixer(scene); // Use THREE.AnimationMixer
+
+  useEffect(() => {
+    // Play all animations in the GLTF file
+    animations.forEach((clip) => mixer.clipAction(clip).play());
+    
+    const animate = () => {
+      mixer.update(0.01); // Adjust timing if needed
+      requestAnimationFrame(animate);
+    };
+    animate();
+
+    // Cleanup function to stop all actions when the component unmounts
+    return () => mixer.stopAllAction();
+  }, [animations, mixer]);
+
+  return <primitive object={scene} scale={[2, 2, 2]} position={[0, -1, 0]} />;
+};
+
+// TitleSection Component
 const TitleSection = () => {
   useEffect(() => {
     const words = ["Software Engineer", "Data Scientist", "AI Enthusiast"];
@@ -59,6 +85,14 @@ const TitleSection = () => {
         </span>
         <span className="blink">|</span>
       </div>
+      
+      {/* 3D Model Canvas */}
+      <Canvas className="model-canvas">
+        <ambientLight intensity={0.5} />
+        <directionalLight position={[0, 10, 5]} intensity={1} />
+        <OrbitControls />
+        <AnimatedModel modelPath="/object.glb" />
+      </Canvas>
     </section>
   );
 };

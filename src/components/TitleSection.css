@@ -1,27 +1,28 @@
 /* TitleSection.css */
 .title-section {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+  flex-direction: row; /* Change to row for side-by-side layout */
+  justify-content: flex-start;
+  align-items: center;
   height: 100vh;
   padding-left: 5vw; /* Slight left padding */
   color: white;
   background: #0f0f0f;
+  gap: 20px; /* Space between the text and model */
 }
 
 .title {
-  font-size: 3vw; /* Reduced size for title */
+  font-size: 3vw; /* Title size */
   font-weight: bold;
   margin: 0;
   animation: fadeIn 1.5s ease-in-out;
 }
 
 .subtitle {
-  font-size: 1.5vw; /* Reduced size for subtitle */
+  font-size: 1.5vw; /* Subtitle size */
   font-weight: 300;
   color: #cccccc;
-  margin-top: 1.5rem; /* Added top margin to create space between "I'm a" and title */
+  margin-top: 1.5rem; /* Space between "I'm a" and dynamic title */
   display: flex;
   align-items: center;
 }
@@ -56,4 +57,9 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.model-canvas {
+  width: 50%; /* Adjust the size of the model canvas */
+  height: 
 }

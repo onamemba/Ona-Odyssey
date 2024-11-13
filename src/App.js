@@ -8,6 +8,9 @@ import EducationSection from './components/EducationSection';
 import CertificationSection from './components/CertificationSection';
 import ProjectSection from './components/ProjectSection';
 import ContactSection from './components/ContactSection';
+
+
+
 function App() {
   return (
     <div>

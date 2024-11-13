@@ -50,7 +50,7 @@ const TitleSection = () => {
   }, []);
 
   return (
-    <section className="title-section">
+    <section id="title-section" className="title-section">
       <h1 className="title">Hi, I'm Francis Tumba</h1>
       <div className="subtitle">
         <span>I'm a </span>

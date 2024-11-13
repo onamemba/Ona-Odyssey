@@ -15,11 +15,16 @@ function App() {
       <div id="title-section">
         <TitleSection />
       </div>
-      <div id="about-section">
+      {/* <div id="about-section">
         <AboutSection />
       </div>
-      {/* <WorkSection />
-      <EducationSection />
+      <div id="work-section">
+        <WorkSection />
+      </div>
+      <div id="education-section">
+        <EducationSection />
+      </div> */}
+      {/* 
       <CertificationSection />
       <ProjectSection />
       <ContactSection /> */}

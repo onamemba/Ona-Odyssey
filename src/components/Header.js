@@ -40,22 +40,6 @@ const Header = () => {
           Education
         </Link>
         <Link
-          to="certification-section"
-          smooth={true}
-          duration={500}
-          className="nav-link"
-        >
-          Certifications
-        </Link>
-        <Link
-          to="project-section"
-          smooth={true}
-          duration={500}
-          className="nav-link"
-        >
-          Projects
-        </Link>
-        <Link
           to="contact-section"
           smooth={true}
           duration={500}

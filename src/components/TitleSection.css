@@ -1,49 +1,69 @@
-/* TitleSection.css */
 .title-section {
   display: flex;
-  flex-direction: row; /* Change to row for side-by-side layout */
-  justify-content: flex-start;
+  flex-direction: row; /* Keep the layout side-by-side */
+  justify-content: space-between; /* Space between text and model */
   align-items: center;
   height: 100vh;
-  padding-left: 5vw; /* Slight left padding */
+  padding: 0 5%; /* Padding for spacing */
   color: white;
-  background: #0f0f0f;
-  gap: 20px; /* Space between the text and model */
+  background: #0f0f0f; /* Dark background color */
+  overflow: hidden;
+}
+
+.text-container {
+  flex: 1;
+  max-width: 50%; /* Take half the width for the text section */
+  text-align: left; /* Align text to the left */
 }
 
 .title {
-  font-size: 3vw; /* Title size */
+  font-size: 3vw; /* Reduced size for the title */
   font-weight: bold;
   margin: 0;
-  animation: fadeIn 1.5s ease-in-out;
+  color: white; /* White color for the title */
+  animation: fadeIn 1.5s ease-in-out; /* Fade-in animation */
 }
 
 .subtitle {
-  font-size: 1.5vw; /* Subtitle size */
+  font-size: 1.5vw; /* Adjusted size for subtitle */
   font-weight: 300;
-  color: #cccccc;
-  margin-top: 1.5rem; /* Space between "I'm a" and dynamic title */
+  color: #cccccc; /* Light gray for the subtitle text */
+  margin-top: 1.5rem;
   display: flex;
   align-items: center;
 }
 
 .subtitle span {
-  margin-right: 0.5rem; /* Space between "I'm a" and dynamic title */
+  margin-right: 0.5rem; /* Space between "I'm a" and the dynamic title */
 }
 
-.header-sub-title {
-  color: #fff;
-  font-family: "Courier", monospace;
-  font-size: 2vw;
-  padding: 0.1em;
+.animated-title {
+  font-weight: bold;
+  color: #008f11; /* Blue color for the animated dynamic text */
 }
 
 .blink {
-  animation: blink 0.5s infinite;
+  animation: blink 0.5s infinite; /* Blinking cursor effect */
+  color: #008f11 /* Matches the animated title color */
 }
 
+.model-container {
+  flex: 1;
+  max-width: 50%; /* Take half the width for the model */
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.model-canvas {
+  width: 100%;
+  height: 100%;
+}
+
+/* Keyframes for animations */
 @keyframes blink {
-  to {
+  50% {
     opacity: 0;
   }
 }
@@ -57,9 +77,4 @@
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-.model-canvas {
-  width: 50%; /* Adjust the size of the model canvas */
-  height: 
 }

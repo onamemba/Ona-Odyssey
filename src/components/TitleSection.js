@@ -28,7 +28,7 @@ const AnimatedModel = ({ modelPath }) => {
   return (
     <primitive
       object={scene}
-      scale={[0.02, 0.02, 0.02]}
+      scale={[3, 3, 3]}
       position={[0, -1, 0]}
       castShadow // Enable shadow casting for the model
     />

@@ -39,12 +39,12 @@
 
 .animated-title {
   font-weight: bold;
-  color: #008f11; /* Blue color for the animated dynamic text */
+  color: white; /* Blue color for the animated dynamic text */
 }
 
 .blink {
   animation: blink 0.5s infinite; /* Blinking cursor effect */
-  color: #008f11 /* Matches the animated title color */
+  color: white /* Matches the animated title color */
 }
 
 .model-container {

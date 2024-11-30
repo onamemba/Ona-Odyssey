@@ -1,56 +1,84 @@
-.education-container {
-    background-color: #111; /* Dark background */
-    color: #fff; /* White text */
-    padding: 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .education-heading {
-    text-align: center;
-  }
-  
-  .education-timeline {
-    position: relative;
-    width: 100%;
-  }
-  
-  .timeline-item {
-    position: relative;
-    width: 100%;
-    margin-bottom: 50px;
-  }
-  
-  .timeline-dot {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background-color: #fff;
-    z-index: 1;
-  }
-  
-  .timeline-content {
-    background-color: #222;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  }
-  
-  .timeline-content p {
-    margin: 10px 0;
-  }
-  
-  .timeline-content ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .timeline-content li {
-    margin-bottom: 5px;
-  }
+/* General Layout */
+.education-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 3rem;
+  background-color: #0f0f0f;
+  color: white;
+}
+
+/* Education Timeline */
+.education-timeline {
+  flex: 1;
+  padding-right: 2rem;
+}
+
+.education-timeline h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.timeline-item {
+  margin-bottom: 2rem;
+  border-left: 3px solid #4fa9ed;
+  padding-left: 1.5rem;
+}
+
+.timeline-content h3 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-content p {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
+
+.timeline-content span {
+  display: block;
+  font-size: 0.9rem;
+  color: #aaaaaa;
+}
+
+/* Certifications Slider */
+.certifications-slider {
+  flex: 1;
+  padding-left: 2rem;
+}
+
+.certifications-slider h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.certification-cards {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 1rem;
+}
+
+.card {
+  flex: 0 0 300px;
+  background: #1e1e1e;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  scroll-snap-align: start;
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: #cccccc;
+}

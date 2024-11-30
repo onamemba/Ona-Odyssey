@@ -18,6 +18,11 @@ function App() {
       <div id="title-section">
         <TitleSection />
       </div>
+      <div id="contact-section">
+        <ContactSection />
+      </div> 
+
+    
       {/* <div id="about-section">
         <AboutSection />
       </div>

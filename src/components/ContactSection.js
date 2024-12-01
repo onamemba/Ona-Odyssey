@@ -7,7 +7,7 @@ const RotatingGlobe = () => {
   return (
     <mesh>
       <sphereGeometry args={[1.5, 32, 32]} />
-      <meshStandardMaterial color="#ffffff" wireframe />
+      <meshStandardMaterial color="#4fa9ed" wireframe />
     </mesh>
   );
 };

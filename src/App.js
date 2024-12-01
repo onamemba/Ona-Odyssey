@@ -18,6 +18,9 @@ function App() {
       <div id="title-section">
         <TitleSection />
       </div>
+      <div id="education-section">
+        <EducationSection />
+      </div> 
       <div id="contact-section">
         <ContactSection />
       </div> 
@@ -29,9 +32,7 @@ function App() {
       <div id="work-section">
         <WorkSection />
       </div>
-      <div id="education-section">
-        <EducationSection />
-      </div> */}
+      */}
       {/* 
       <CertificationSection />
       <ProjectSection />

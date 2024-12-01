@@ -8,16 +8,15 @@
   color: white;
 }
 
-/* Education Timeline */
-.education-timeline {
-  flex: 1;
-  padding-right: 2rem;
-}
-
 .education-timeline h2 {
   font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 2rem;
+}
+/* Certifications Carousel */
+.certifications-carousel {
+  flex: 1;
+  padding-left: 2rem;
 }
 
 .timeline-item {
@@ -43,42 +42,136 @@
   color: #aaaaaa;
 }
 
-/* Certifications Slider */
-.certifications-slider {
-  flex: 1;
-  padding-left: 2rem;
-}
-
-.certifications-slider h2 {
+.certifications-carousel h2 {
   font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 2rem;
+  text-align: center;
 }
 
-.certification-cards {
+.carousel-container {
   display: flex;
-  gap: 1.5rem;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  padding-bottom: 1rem;
+  align-items: center;
+  position: relative;
+  width: 100%;
 }
 
+.carousel-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  cursor: grab;
+  transition: transform 0.3s ease;
+  width: 100%;
+}
+
+/* Card Styling */
 .card {
-  flex: 0 0 300px;
   background: #1e1e1e;
   border-radius: 10px;
-  padding: 1.5rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  scroll-snap-align: start;
+  padding: 1rem;
+  text-align: center;
+  color: white;
+  box-shadow: 0 4px 10px rgba(65, 46, 46, 0.3);
+  width: 250px;
+  height: 300px;
+  transform: scale(0.8);
+  transition: transform 0.3s ease, opacity 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
 }
 
-.card h3 {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
+/* Center Active Card */
+.card.active {
+  transform: scale(1);
+  opacity: 1;
+  filter: grayscale(0%);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
 }
 
-.card p {
+/* First Dimmed Left Card */
+.card.left {
+  transform: scale(0.9);
+  opacity: 0.7;
+  filter: grayscale(20%);
+  left: 8%;
+  z-index: 2;
+}
+
+/* First Dimmed Right Card */
+.card.right {
+  transform: scale(0.9);
+  opacity: 0.7;
+  filter: grayscale(20%);
+  left: 65%;
+  z-index: 2;
+}
+
+/* Second Dimmed Left/Right Card */
+.card.left-dimmed,
+.card.right-dimmed {
+  transform: scale(0.8);
+  opacity: 0.5;
+  filter: grayscale(40%);
+  z-index: 1;
+}
+
+/* Hidden Cards */
+.card.hidden {
+  opacity: 0;
+  z-index: 0;
+}
+
+.cert-card ul {
+  list-style-type: disc; /* Use disc for bullet points */
+  padding-left: 20px; /* Adjust the padding as needed */
+}
+
+.cert-card ul li {
+  margin-bottom: 5px;
+  text-align:left
+}
+
+/* Carousel Dots */
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 23rem; /* Space between cards and dots */
+  position: relative; /* Ensure relative positioning to align under the cards */
+  z-index: 100; /* Ensure it appears above any background */
+}
+
+.carousel-dot {
+  width: 12px;
+  height: 12px;
+  background: #555;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.carousel-dot.active {
+  background: #4fa9ed; /* Highlight active dot */
+}
+
+.credly-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #4fa9ed;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
   font-size: 0.9rem;
-  color: #cccccc;
+  transition: background-color 0.3s ease;
+}
+
+.credly-btn:hover {
+  background-color: #357bbd;
 }
